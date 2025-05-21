@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Topología de Red</title>
+  <link rel="stylesheet" href="css/topologia.css">
+</head>
+<body>
+  <div class="sidebar">
+     <h2>🔍 Explorador de Red</h2>
+  <input id="jump_host" type="text" placeholder="IP ISP">
+  <input id="jump_user" type="text" placeholder="Usuario ISP">
+  <input id="jump_pass" type="password" placeholder="Contraseña ISP">
+
+  <h3>🧩 Saltos adicionales</h3>
+  <div id="saltos-extra"></div>
+  <button onclick="agregarSalto()">➕ Agregar Router</button>
+  <button onclick="explorar()">🧭 Explorar Multisalto</button>
+  </div>
+
+  <div class="main">
+  <svg id="svg-topologia" width="100%" height="800px"></svg>
+  <ul id="log"></ul>
+</div>
+
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/topologia.js"></script>
+</body>
+</html>

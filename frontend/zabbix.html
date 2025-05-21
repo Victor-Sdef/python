@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administración Zabbix vía SSH</title>
+  <link rel="stylesheet" href="css/Zabbix.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 Administración SSH</h1>
+
+    <form id="form-zabbix">
+      <fieldset>
+        <legend>🔒 Datos de conexión (ISP)</legend>
+        <input type="text" id="ip" placeholder="IP ISP" required />
+        <input type="text" id="user" placeholder="Usuario ISP" required />
+        <input type="password" id="pass" placeholder="Contraseña ISP" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>🌐 Datos del router destino (opcional)</legend>
+        <input type="text" id="ipDestino" placeholder="IP destino (opcional)" />
+        <input type="text" id="userDestino" placeholder="Usuario destino (opcional)" />
+        <input type="password" id="passDestino" placeholder="Contraseña destino (opcional)" />
+      </fieldset>
+
+      <div style="margin-top: 20px;">
+        <button type="button" onclick="loginSSH()">🔐 Iniciar sesión SSH</button>
+        <button type="button" onclick="checkStatus()">📊 Verificar Estado</button>
+        <button type="button" onclick="controlZabbix('start')">▶️ Activar</button>
+        <button type="button" onclick="controlZabbix('stop')">⏹️ Desactivar</button>
+        <button type="button" onclick="controlZabbix('restart')">🔄 Reiniciar</button>
+      </div>
+<label>
+  <input type="checkbox" id="usarEnable" checked />
+  Entrar a modo enable
+</label>
+
+      <div id="statusBox">Esperando resultado...</div>
+
+      <div class="output-area" id="commandOutput">
+        <strong>🧾 Registro de comandos:</strong><br>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/Zabbix.js"></script>
+</body>
+</html>
+<!-- 
+ -->

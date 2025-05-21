@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD SSH Routers</title>
+  <link rel="stylesheet" href="css/apiRes.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>🧠 CRUD SSH para Routers</h2>
+
+    <input id="isp-ip" type="text" placeholder="IP del ISP" />
+    <input id="isp-user" type="text" placeholder="Usuario ISP" />
+    <input id="isp-pass" type="password" placeholder="Contraseña ISP" />
+
+    <hr />
+
+    <input id="router-ip" type="text" placeholder="IP del Router destino" />
+    <input id="router-user" type="text" placeholder="Usuario Router" />
+    <input id="router-pass" type="password" placeholder="Contraseña Router" />
+
+    <input id="interface" type="text" placeholder="Interfaz (e.g., G0/1)" />
+    <input id="ip" type="text" placeholder="IP (e.g., 192.168.1.1)" />
+    <input id="mask" type="text" placeholder="Máscara (e.g., 255.255.255.0)" />
+
+    <div class="botones">
+      <button onclick="consultar('router-info')">🔍 Interfaces</button>
+      <button onclick="consultar('router-routes')">🧭 Rutas</button>
+      <button onclick="consultar('router-hostname')">🏷️ Hostname</button>
+      <button onclick="crud('POST')">➕ Crear Interfaz</button>
+      <button onclick="crud('PUT')">🔄 Actualizar Interfaz</button>
+      <button onclick="crud('DELETE')">🗑️ Eliminar Interfaz</button>
+    </div>
+  </div>
+
+  <pre id="resultado" class="resultado"></pre>
+
+  <script src="js/apiRes.js"></script>
+</body>
+</html>

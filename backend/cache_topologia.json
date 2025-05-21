@@ -1,0 +1,28 @@
+{
+  "nodos": [
+    {
+      "id": "Router-192.168.142.144",
+      "label": "\ud83e\udde0 192.168.142.144",
+      "shape": "box",
+      "color": "#00bcd4"
+    },
+    {
+      "id": "R1.red.local",
+      "label": "R1.red.local\n214.205.5.21",
+      "shape": "ellipse",
+      "color": "#00eaff"
+    }
+  ],
+  "enlaces": [
+    {
+      "from": "Router-192.168.142.144",
+      "to": "R1.red.local",
+      "label": "GigabitEthernet0/0 \u21c4 GigabitEthernet0/2",
+      "font": {
+        "align": "middle"
+      },
+      "arrows": "to",
+      "id": "a6dc49da-7385-43af-ba62-0a5d0144a216"
+    }
+  ]
+}

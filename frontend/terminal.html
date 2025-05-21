@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal SSH</title>
+  <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+  <div class="terminal-wrapper">
+    <h2>🧑‍💻 Terminal SSH - Conexión</h2>
+
+    <!-- Formulario de conexión -->
+    <form id="form-login" class="formulario">
+      <input type="text" id="ip" placeholder="IP del Router" required>
+      <input type="text" id="usuario" placeholder="Usuario SSH" required>
+      <input type="password" id="clave" placeholder="Contraseña SSH" required>
+      <button type="submit">🔌 Conectar</button>
+    </form>
+
+    <!-- Área interactiva de comandos -->
+    <div id="terminal-area" class="terminal-area" style="display: none;">
+      <div id="terminal-output" class="terminal-output"></div>
+      <form id="form-comando" class="formulario" onsubmit="return false;">
+        <textarea id="comando" placeholder="Escribe un comando y presiona ENTER" rows="1"></textarea>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/terminal.js"></script>
+</body>
+</html>

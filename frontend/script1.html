@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Administración SSH de Routers</title>
+  <link rel="stylesheet" href="css/script1.css">
+</head>
+<body>
+  <div class="container">
+     <h2>🔧 Administración SSH</h2>
+
+    <h3>🔒 Datos de conexión (ISP)</h3>
+    <input id="jump_host" placeholder="IP ISP">
+    <input id="jump_user" placeholder="Usuario ISP">
+    <input id="jump_pass" type="password" placeholder="Contraseña ISP">
+
+    <h3>🌐 Datos del router destino (opcional)</h3>
+    <input id="host" placeholder="IP destino (opcional)">
+    <input id="user" placeholder="Usuario destino (opcional)">
+    <input id="pass" type="password" placeholder="Contraseña destino (opcional)">
+
+    <h3>⚙️ Gestión de Interfaces</h3>
+    <label for="intf">Interfaz:</label>
+<select id="intf">
+  <option value="GigabitEthernet0/0">GigabitEthernet0/0</option>
+  <option value="GigabitEthernet0/1">GigabitEthernet0/1</option>
+  <option value="GigabitEthernet0/2">GigabitEthernet0/2</option>
+  <option value="GigabitEthernet0/3">GigabitEthernet0/3</option>
+  <option value="GigabitEthernet0/4">GigabitEthernet0/4</option>
+  <option value="GigabitEthernet0/5">GigabitEthernet0/5</option>
+  <option value="GigabitEthernet0/6">GigabitEthernet0/6</option>
+  <option value="GigabitEthernet0/7">GigabitEthernet0/7</option>
+  <option value="GigabitEthernet0/8">GigabitEthernet0/8</option>
+  <option value="GigabitEthernet0/9">GigabitEthernet0/9</option>
+</select>
+    <input id="ip" placeholder="IP (opcional)">
+    <input id="mask" placeholder="Máscara (opcional)">
+
+    <div class="buttons">
+      <button onclick="accion('router-hostname')">📛 Ver Nombre del Router</button>
+      <button onclick="accion('router-info')">📋 Ver Interfaces</button>
+      <button onclick="accion('router-routes')">🧭 Vecinos conectados</button>
+      <button onclick="accion('interface', 'POST')">➕ Crear Interfaz</button>
+      <button onclick="accion('interface', 'PUT')">✏️ Editar Interfaz</button>
+      <button onclick="accion('interface', 'DELETE')">🗑️ Borrar Interfaz</button>
+    </div>
+
+   <h3>📤 Resultado</h3>
+<div id="output" class="terminal-output">
+  <span class="placeholder">Esperando resultado...</span>
+</div>
+
+  </div>
+  <script src="js/script1.js"></script>
+</body>
+</html>
